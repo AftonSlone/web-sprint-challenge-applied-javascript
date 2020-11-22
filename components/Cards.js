@@ -23,7 +23,7 @@
 const { default: Axios } = require("axios");
 
 // Use your function to create a card for each of the articles, and append each card to the DOM.
-const articleMaker = (story) => {
+const articleMaker = (story, topic) => {
   const card = document.createElement("div");
   const headline = document.createElement("div");
   const author = document.createElement("div");
@@ -32,6 +32,8 @@ const articleMaker = (story) => {
   const span = document.createElement("span");
 
   card.classList.add("card");
+  card.classList.add(`${topic}`);
+  card.classList.add("hidden");
   headline.classList.add("headline");
   author.classList.add("author");
   imgContainer.classList.add("img-container");
@@ -90,7 +92,7 @@ axios
       res.data.articles[topic].forEach((story) => {
         document
           .querySelector(".cards-container")
-          .appendChild(articleMaker(story));
+          .appendChild(articleMaker(story, topic));
       });
     });
   })
