@@ -23,6 +23,14 @@ axios
       tab.textContent = `${topic}`;
 
       document.querySelector(".topics").appendChild(tab);
+
+      tab.addEventListener("click", (e) => {
+        document
+          .querySelectorAll(`.${topic.replace(".js", "")}`)
+          .forEach((card) => {
+            card.classList.toggle("hidden");
+          });
+      });
     });
   })
   .catch((err) => {

@@ -1,62 +1,86 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Lambda Times</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles/index.less" rel="stylesheet" />
+    <link href="./styles/Carousel.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
-<head>
-  <title>Lambda Times</title>
-  <link rel="icon" href="./favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-  <link href="./styles/index.less" rel="stylesheet" />
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./components/Tabs.js" defer></script>
+    <script src="./components/Header.js" defer></script>
+    <script src="./components/Cards.js" defer></script>
 
-  <script src="./components/Tabs.js" defer></script>
-  <script src="./components/Header.js" defer></script>
-  <script src="./components/Cards.js" defer></script>
+    <!-- The Carousel is a stretch goal! -->
+    <script src="./components/Carousel.js" defer></script>
+  </head>
 
-  <!-- The Carousel is a stretch goal! -->
-  <script src="./components/Carousel.js" defer></script>
-</head>
-
-<body>
-  <div class="top-bar">
-    <div class="container">
-      <div class="container-left">
-        <span>TOPICS</span><span>SEARCH</span>
-      </div>
-      <div class="container-center">
-        <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-      </div>
-      <div class="container-right">
-        <span>LOG IN</span>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <div class="container-left"><span>TOPICS</span><span>SEARCH</span></div>
+        <div class="container-center">
+          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span
+          ><span>MUSIC</span><span>ANNOUNCEMENTS</span>
+        </div>
+        <div class="container-right">
+          <span>LOG IN</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="header-container">
-    <!-- 1. PLACE HEADER HERE -->
-  </div>
-
-  <div class="tabs">
-    <div class="topics">
-      <span class="title">TRENDING TOPICS:</span>
-      <!-- 2. PLACE TABS HERE -->
+    <div class="header-container">
+      <!-- 1. PLACE HEADER HERE -->
     </div>
-  </div>
 
-  <div class="cards-container">
-    <!-- 3. PLACE CARDS HERE -->
-  </div>
+    <div class="tabs">
+      <div class="topics">
+        <span class="title">TRENDING TOPICS:</span>
+        <!-- 2. PLACE TABS HERE -->
+      </div>
+    </div>
 
-  <!-- STRETCH GOAL. ONLY ATTEMPT THIS WHEN YOU ARE FINISHED WITH THE MAIN OBJECTIVES -->
-  <div class="carousel-container">
+    <div class="cards-container">
+      <!-- 3. PLACE CARDS HERE -->
+    </div>
+
+    <!-- STRETCH GOAL. ONLY ATTEMPT THIS WHEN YOU ARE FINISHED WITH THE MAIN OBJECTIVES -->
+    <!-- <div class="carousel-container"> -->
     <!-- PLACE CAROUSEL HERE -->
-  </div>
+    <div class="carousel-wrapper">
+      <!-- <div class="carousel">
+        <img
+          class="carousel__photo initial"
+          src="https://tk-assets.lambdaschool.com/0b770382-d0eb-4465-8bf2-692a79fcda71_turntable.jpeg"
+        />
+        <img
+          class="carousel__photo"
+          src="https://tk-assets.lambdaschool.com/ba687af4-3a1e-43d7-87b2-f30453264c9d_mountains.jpeg"
+        />
+        <img
+          class="carousel__photo"
+          src="https://tk-assets.lambdaschool.com/8aa075b0-67cf-47ce-9a7f-8cc9d754675d_computer.jpeg"
+        />
+        <img
+          class="carousel__photo"
+          src="https://tk-assets.lambdaschool.com/5b7441c6-6e4b-4feb-a4ec-8dd2eb76238a_trees.jpeg"
+        />
 
-  <!-- STRETCH GOAL. ONLY ATTEMPT THIS WHEN YOU ARE FINISHED WITH THE MAIN OBJECTIVES -->
-  <div class="errors-container">
-    <!-- ERROR MESSAGES FOR FAILED REQUESTS -->
-  </div>
-</body>
+        <div class="carousel__button--next"></div>
+        <div class="carousel__button--prev"></div>
+      </div> -->
+    </div>
+    <!-- </div> -->
 
+    <!-- STRETCH GOAL. ONLY ATTEMPT THIS WHEN YOU ARE FINISHED WITH THE MAIN OBJECTIVES -->
+    <div class="errors-container">
+      <!-- ERROR MESSAGES FOR FAILED REQUESTS -->
+    </div>
+  </body>
 </html>

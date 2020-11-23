@@ -22,3 +22,56 @@
     <div class="right-button"> > </div>
   </div>
 */
+const links = [
+  "https://tk-assets.lambdaschool.com/ba687af4-3a1e-43d7-87b2-f30453264c9d_mountains.jpeg",
+  "https://tk-assets.lambdaschool.com/8aa075b0-67cf-47ce-9a7f-8cc9d754675d_computer.jpeg",
+  "https://tk-assets.lambdaschool.com/5b7441c6-6e4b-4feb-a4ec-8dd2eb76238a_trees.jpeg",
+  "https://tk-assets.lambdaschool.com/0b770382-d0eb-4465-8bf2-692a79fcda71_turntable.jpeg",
+];
+
+function carouselMaker(link) {
+  const carousel = document.createElement("div");
+  const leftButton = document.createElement("div");
+  const img1 = document.createElement("img");
+  const img2 = document.createElement("img");
+  const img3 = document.createElement("img");
+  const img4 = document.createElement("img");
+  const rightButton = document.createElement("div");
+
+  carousel.classList.add("carousel");
+  leftButton.classList.add("carousel__button--prev");
+  img1.classList.add("carousel__photo");
+  img1.classList.add("initial");
+  img2.classList.add("carousel__photo");
+  img3.classList.add("carousel__photo");
+  img4.classList.add("carousel__photo");
+  img1.src = links[0];
+  img2.src = link[1];
+  img3.src = link[2];
+  img4.src = link[3];
+  rightButton.classList.add("carousel__button--next");
+
+  carousel.appendChild(leftButton);
+  carousel.appendChild(img1);
+  carousel.appendChild(img2);
+  carousel.appendChild(img3);
+  carousel.appendChild(img4);
+  carousel.appendChild(rightButton);
+
+  document.querySelector(".carousel-wrapper").appendChild(carousel);
+  console.log(carousel);
+  return carousel;
+}
+
+carouselMaker(links);
+
+const carouselSlide = document.querySelector(".carousel");
+const carouselImages = document.querySelectorAll(".carousel img");
+
+const prevBtn = document.querySelector(".carousel__button--prev");
+const nextBtn = document.querySelector(".carousel__button--next");
+
+let counter = 1;
+const sidze = carouselImages[0].clientWidth;
+
+carouselSlide.style.transform = "translateX(" + -size * counter + "px+)";
